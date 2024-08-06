@@ -19,6 +19,7 @@ def load_users():
 
 # ユーザーデータを保存
 def save_users(users):
+    print("save_users")
     with open(USER_FILE, 'w') as file:
         json.dump(users, file)
 
