@@ -1,11 +1,10 @@
 use actix_web::{web, App, HttpServer, HttpResponse, Responder, post, get, delete};
 use serde::{Deserialize, Serialize};
-use std::fs::{self, File};
+use std::fs::{File};
 use std::io::{Read, Write};
 use std::sync::Mutex;
-use jsonwebtoken::{encode, decode, Header, Validation, EncodingKey, DecodingKey, Algorithm};
+use jsonwebtoken::{encode, decode, Header, Validation, EncodingKey, DecodingKey};
 use actix_web_httpauth::extractors::bearer::BearerAuth;
-use std::collections::HashMap;
 
 #[derive(Debug, Serialize, Deserialize)]
 struct User {
